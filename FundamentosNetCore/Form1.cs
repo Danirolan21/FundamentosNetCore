@@ -14,6 +14,7 @@ namespace FundamentosNetCore
             this.txtNombre.Location = new Point(104, 67);
             this.txtNombre.Text = "Hola Mundo";
             this.txtNombre.Width = 125;
+            this.txtNombre.TextAlign = HorizontalAlignment.Center;
         }
     }
 }
