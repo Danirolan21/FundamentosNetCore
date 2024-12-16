@@ -30,7 +30,31 @@ namespace FundamentosNetCore
             var verde = int.Parse(txtVerde.Text);
             var azul = int.Parse(txtAzul.Text);
 
-            this.BackColor = Color.FromArgb(rojo, verde, azul);
+            if (rojo < 0 || rojo > 255)
+            {
+                MessageBox.Show("El valor de rojo debe estar entre 0 y 255",
+                    "Titulo",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Question);
+            }
+            else if (verde < 0 || verde > 255)
+            {
+                MessageBox.Show("El valor de verde debe estar entre 0 y 255",
+                    "Titulo",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Question);
+            }
+            else if (azul < 0 || azul > 255)
+            {
+                MessageBox.Show("El valor de azul debe estar entre 0 y 255",
+                    "Titulo",
+                    MessageBoxButtons.RetryCancel,
+                    MessageBoxIcon.Question);
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(rojo, verde, azul);
+            }
         }
     }
 }
