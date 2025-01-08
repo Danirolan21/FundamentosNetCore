@@ -9,9 +9,20 @@ namespace ProyectoClases
 {
     public class Empleado: Persona
     {
+        protected int SalarioMinimo { get; set; }
         public Empleado()
         {
             Debug.WriteLine("Constructor EMPLEADO vacío");
+            this.SalarioMinimo = 1400;
+        }
+        public int GetSalarioMinimo() 
+        { 
+            return this.SalarioMinimo; 
+        }
+        public int GetDiasVacaciones()
+        {
+            Debug.WriteLine("Empleado GetDiasVacaciones");
+            return 22;
         }
         public Empleado(string nombre, string apellidos)
         {
